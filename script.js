@@ -55,7 +55,7 @@ function handleColorClick(e) {
     if (selectedColor === pickedColor) {
         SPAN_MESSAGE.innerText = 'Very good!, Amaizing!';
         for (const button in HTML_BUTTONS) {
-            HTML_BUTTONS[button].disabled = true
+            if (`${button}` !== 'reset') HTML_BUTTONS[button].disabled = true;
         }
         changeColors(pickedColor);
         e.target.removeEventListener('click', handleColorClick, false);
