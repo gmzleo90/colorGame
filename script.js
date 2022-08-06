@@ -22,7 +22,8 @@ document.querySelectorAll("[data-close]").forEach((button) => {
 const SQUARES = document.querySelectorAll(".square");
 const SPAN_MESSAGE = document.getElementById("message");
 const BODY_COLOR = document.querySelector('body').style.backgroundColor;
-const H1_COLOR_DISPLAY = document.getElementById("colorDisplay");
+const SPAN_H1 = document.getElementById("colorDisplay");
+const H1_BACKGROUND_COLOR = document.querySelector("h1");
 const HTML_BUTTONS = {
     reset: document.getElementById("reset"),
     easy: document.getElementById("easyButton"),
@@ -71,7 +72,7 @@ function handleColorClick(e) {
 }
 //some HTML elements will change color to the winner color
 function changeColors(inputColor) {
-    H1_COLOR_DISPLAY.style.backgroundColor = inputColor;
+    H1_BACKGROUND_COLOR.style.backgroundColor = inputColor;
     SQUARES.forEach((square) => {
         square.style.backgroundColor = inputColor;
     });
@@ -162,11 +163,11 @@ function reset(e = null) {
     }
     //if reset button is pressed there is event
     if (e) {
-        H1_COLOR_DISPLAY.style.backgroundColor = BODY_COLOR;
+        H1_BACKGROUND_COLOR.style.backgroundColor = BODY_COLOR;
         SPAN_MESSAGE.innerText = ''
         HTML_BUTTONS.reset.innerText = 'Refresh Colors'
     }
-    H1_COLOR_DISPLAY.innerText = pickedColor;
+    SPAN_H1.textContent = pickedColor;
 }
 
 function squaresBehaviourReset() {
