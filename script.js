@@ -59,7 +59,7 @@ function handleColorClick(e) {
         }
         changeColors(pickedColor);
         e.target.removeEventListener('click', handleColorClick, false);
-        //HTML_BUTTONS.reset.innerText = 'Play Again?'
+        HTML_BUTTONS.reset.innerText = 'Play Again?'
         //notification('Nice!', 'You win!, click Restart Game to play again', 'RESTART GAME');
     } else {
         e.target.style.backgroundColor = BODY_COLOR;
