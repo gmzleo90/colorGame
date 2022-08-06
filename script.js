@@ -1,3 +1,5 @@
+//welcome text
+let WelcomeText = 'Bienvenido, este es el ColorGame, deberas adivinar el color correcto leyendo el codigo RGB del titulo superior. Es simple, adivinás, ganas, no adivinas, No pasa nada jajaja. Hay dos niveles de dificultad en los botones de la esquina inferior derecha, podrás seleccionar entre Easy y Hard (fácil y Difícil).Divertite'
 //utils color
 let colors = [],
     pickedColor = '',
@@ -33,7 +35,7 @@ HTML_BUTTONS.reset.addEventListener('click', reset);
 
 //first Star Game
 reset();
-
+notification('Hola!', WelcomeText, "CONTINUAR");
 
 
 //assign colors to divs.square
@@ -180,6 +182,8 @@ function notification(modalTitle, bodyMessage, buttonText) {
     document.getElementById("modal-button").innerHTML = `<h3>${buttonText}</h3>`
     modal.classList.add(isVisible);
 }
+
+
 
 
 
